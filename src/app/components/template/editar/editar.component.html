@@ -1,0 +1,39 @@
+<header class="header">
+    <div class="logo">
+        <a href=""><img src="../../../../assets/images/pecas.png" alt=""></a>
+    </div>  <!--logo-->
+    
+    <div class="nav">
+         <a href=""><h3>Auto peças Fusca Azul</h3> <h5>Controle de Estoque</h5> </a>
+     </div><!--nav-->   
+     <div class="sair">
+        <a routerLink="">Voltar</a>
+    </div>
+</header>
+
+
+<form #f="ngForm" (ngSubmit)="onSubmit(f)">
+    <h3>Editar Estoque</h3>
+    <label for="codigo" >Código</label>
+    <input type="text" name="codigo" id="codigo"  [(ngModel)]="item.codigo" Readonly/>
+
+    <label for="peca">Peça</label>
+    <input type="text" name="peca" id="peca"  [(ngModel)]="item.peca"Readonly />
+
+    <label for="estoque">Estoque</label>
+    <input type="text" name="estoque" id="estoque"  [(ngModel)]="item.estoque" readonly/>
+
+    <label for="maxEstoque">min Estoque</label>
+    <input type="text" name="maxEstoque" id="maxEstoque" [(ngModel)]="item.maxEstoque"Readonly/>
+
+    <label for="minEstoque">max Estoque</label>
+    <input type="text" name="minEstoque" id="minEstoque"  [(ngModel)]="item.minEstoque"Readonly/>
+
+    <label for="editar">Ensira uma quantidade para atualizar o estoque</label>
+    <input type="text" name="editar" id="editar" ngModel/>
+
+            <button type="submit" name="add" id="add">(+) Adicionar</button>
+            <button type="button" (click)="remover(f)">(-) Remover</button>
+    
+
+</form>
